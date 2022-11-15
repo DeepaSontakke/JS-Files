@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Array Iteration</h2>
+
+    <script>
+
+        const numbers = [1, 2, 3, 4, 5];
+
+        let text = " ";
+        numbers.forEach(myFunction);   // forEach() Method
+        document.write(text);
+
+        function myFunction(value) {
+            text += value + "<br>";
+        }
+
+
+        let text1 = " ";
+        const numbers1 = numbers.map(myFunction1);  // map() Method
+
+        function myFunction1(value) {
+            text1 += value * 2 + "<br>";
+        }
+        document.write(text1);
+
+        const Numbers = [45, 4, 9, 16, 25];
+        const over18 = Numbers.filter(myFunction2);  // filter() Method
+
+        function myFunction2(value) {
+            return value > 18;
+        }
+        console.log(over18);
+
+        let sum = Numbers.reduce(myFunction3);  // reduce() Method
+        console.log(sum);
+
+        function myFunction3(total, value) {
+            return total + value;
+        }
+        
+
+        
+
+    </script>
+</body>
+
+</html>
